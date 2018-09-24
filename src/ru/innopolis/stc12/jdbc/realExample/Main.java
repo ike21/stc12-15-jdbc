@@ -18,8 +18,8 @@ public class Main {
 //
 //        student.setName("Mikhail");
 //        student.setFamilyName("Nekhoroshev");
-        student.setCity(null);
-        studentDao.updateStudent(student);
+//        student.setCity(null);
+//        studentDao.updateStudent(student);
 
 //        studentDao.deleteStudentById(1);
 

@@ -17,7 +17,7 @@ public class StudentDaoImpl implements StudentDao {
     public boolean addStudent(Student student) {
         Connection connection = connectionManager.getConnection();
         CityDaoImpl cityDao = new CityDaoImpl();
-        if (student != null || student.getCity() != null) {
+        if (student != null && student.getCity() != null) {
             if (cityDao.getCityById(student.getCity().getId()) == null) {
                 cityDao.addCity(student.getCity());
             }
@@ -61,7 +61,7 @@ public class StudentDaoImpl implements StudentDao {
     @Override
     public boolean updateStudent(Student student) {
         CityDaoImpl cityDao = new CityDaoImpl();
-        if (student != null || student.getCity() != null) {
+        if (student != null && student.getCity() != null) {
             if (cityDao.getCityById(student.getCity().getId()) == null) {
                 cityDao.addCity(student.getCity());
             }
